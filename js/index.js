@@ -12,6 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var nickname = urlParams.get("nickname");
     if (nickname) {
         var nicknameDisplay = document.getElementById("nickname-display");
-        nicknameDisplay.textContent = "Quiz Start " + nickname + "!";
+        nicknameDisplay.textContent = "Start Quiz " + nickname + "!";
     }
 });
