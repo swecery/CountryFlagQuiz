@@ -215,3 +215,18 @@ body {
     color: #444;
     margin-bottom: 5px;
 }
+
+#restart-button {
+    cursor: pointer; 
+    margin: 5px;
+    margin-left: 5px;
+}
+
+#quiz-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 0 auto;
+}

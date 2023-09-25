@@ -16,30 +16,36 @@ $(document).ready(function () {
             }
         }, 1000);
     }
+
+    function loadImages() {
+        var current = questions[currentQuestion];
+        $("#flag-image").attr("src", current.image);
+    }
+
     function displayQuestion() {
         if (currentQuestion >= 0 && currentQuestion < questions.length) {
             var current = questions[currentQuestion];
             $("#question").text(current.question);
-            $("#flag-image").attr("src", current.image);
             $("#countdown").text(countdown);
             var answersList = $("#answers").empty();
-
+    
             current.answers.forEach(function (answer, index) {
                 var listItem = $("<li></li>");
                 var answerButton = $("<button class='answer'></button>").text(answer);
                 answerButton.on("click", function () {
                     checkAnswer(index);
                 });
-
+    
                 listItem.append(answerButton);
                 answersList.append(listItem);
             });
-
+            loadImages();
             startCountdown();
         } else {
             console.log("Quiz finish.");
         }
     }
+    
 
 
     function checkAnswer(userAnswerIndex) {
@@ -55,10 +61,18 @@ $(document).ready(function () {
             $("#answers").empty();
             $("#flag-image").hide();
             $("#time-remaining").hide();
-            $(".go-leader").html('<button class="button" id="results-button">See Results</button>');
+            $(".go-leader").html(`
+            <button class="button" id="results-button">See Results</button> 
+            <button class="button" id="restart-button">Restart</button>
+        `);
             $("#results-button").click(function () {
                 goToResults();
             });
+            $("#restart-button").click(function () {
+                quizRestart();
+            });
+            
+            
             const nickname = window.location.href.split("?")[1].split("=")[1];
             let data = JSON.parse(localStorage.getItem("userData")) || [];
             if (!data) {
@@ -68,7 +82,17 @@ $(document).ready(function () {
             localStorage.setItem("userData", JSON.stringify(data));
             console.log(data);
         }
+    }function quizRestart() {
+        currentQuestion = 0;
+        score = 0;
+        const nickname = window.location.href.split("?")[1].split("=")[1];
+        let data = JSON.parse(localStorage.getItem("userData")) || [];
+        data = data.filter(entry => entry.nickname !== nickname);
+        localStorage.setItem("userData", JSON.stringify(data));
+        $("#flag-image").show();
+        displayQuestion(); 
     }
+
     function goToResults() {
         $(".question-card").css("display", "none");
         $(".results").css("display", "block");
@@ -83,6 +107,7 @@ $(document).ready(function () {
         $(".result-list").html(resultHTML);
 
     }
+ 
 
     displayQuestion();
 });
