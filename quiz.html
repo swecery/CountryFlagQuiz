@@ -1,35 +1,38 @@
 <!DOCTYPE html>
+
 <head>
     <title>Quiz Page</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="navbar-brand"><a href="index.html">FlagQuiz</a></div>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Quiz</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Leaderboard</a>
-            </li>
-        </ul>
     </nav>
     <div class="main-container">
         <div class="question-card">
-        <h2 id="question"></h3>
-        <img id="flag-image" src="" alt="">
-        <p id="time-remaining">Time: <span id="countdown">15</span> second</p>
-        <ul id="answers">
-            <li><button class="answer"></button></li>
-            <li><button class="answer"></button></li>
-            <li><button class="answer"></button></li>
-            <li><button class="answer"></button></li>
-        </ul>
+            <h2 id="question">
+                </h3>
+                <img id="flag-image" src="" alt="">
+                <p id="time-remaining">Time: <span id="countdown">15</span> second</p>
+                <ul id="answers">
+                    <li><button class="answer"></button></li>
+                    <li><button class="answer"></button></li>
+                    <li><button class="answer"></button></li>
+                    <li><button class="answer"></button></li>
+                </ul>
+                <div class="go-leader"></div>
+        </div>
+        <div class="results">
+            <h2>Results</h2>
+            <ul class="result-list">
+            </ul>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/quiz.js"></script>
     <script src="js/questions.js"></script>
+    <script src="js/quiz.js"></script>
+
 </body>
+
 </html>
