@@ -46,10 +46,11 @@ $(document).ready(function () {
         } else {
             $("#question").text("Quiz Finished! Your Score: " + score);
             $("#answers").empty();
-            $("#flag-image").attr("src", "");
+            $("#flag-image").hide();
             $("#time-remaining").hide(); 
         }
     }
+
 
     displayQuestion();
 });

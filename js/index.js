@@ -14,4 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
         var nicknameDisplay = document.getElementById("nickname-display");
         nicknameDisplay.textContent = "Start Quiz " + nickname + "!";
     }
+    function displayQuizInfo() {
+        var quizInfo = document.getElementById("quiz-info");
+        quizInfo.style.display = "block"; // Bilgilendirme metnini görünür hale getir
+    }
+    
+    
+});
+document.querySelector('.close-button').addEventListener('click', function () {
+    document.querySelector('.quiz-info').style.display = 'none';
 });
