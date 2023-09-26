@@ -4,7 +4,7 @@
 
 This project is a simple web-based quiz game that tests users' knowledge of country flags. It's built using HTML, CSS, and JavaScript and aims to provide an enjoyable and educational experience. Users are shown flag images and must select the correct country from four options within a 15-second time limit. After completing the quiz, a leaderboard displays the top scores.
 
-![1](https://raw.githubusercontent.com/swecery/CountryFlagsQuiz/main/img/Screenshot1.png)
+![1](https://raw.githubusercontent.com/swecery/CountryFlagQuiz/main/img/Screenshot1.png)
 
 ## How It Works
 
@@ -14,9 +14,9 @@ This project is a simple web-based quiz game that tests users' knowledge of coun
 
 3. Results and Leaderboard: After completing the quiz, the user's score is added to the leaderboard, showing the highest scores at the top.
 
-![2](https://raw.githubusercontent.com/swecery/CountryFlagsQuiz/main/img/Screenshot2.png)
-![3](https://raw.githubusercontent.com/swecery/CountryFlagsQuiz/main/img/Screenshot3.png)
-![4](https://raw.githubusercontent.com/swecery/CountryFlagsQuiz/main/img/Screenshot4.png)
+![2](https://raw.githubusercontent.com/swecery/CountryFlagQuiz/main/img/Screenshot2.png)
+![3](https://raw.githubusercontent.com/swecery/CountryFlagQuiz/main/img/Screenshot3.png)
+![4](https://raw.githubusercontent.com/swecery/CountryFlagQuiz/main/img/Screenshot4.png)
 
 
 
