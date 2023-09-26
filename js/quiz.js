@@ -71,6 +71,7 @@ $(document).ready(function () {
             $("#restart-button").click(function () {
                 quizRestart();
             });
+            $(".go-leader").show();
             
             
             const nickname = window.location.href.split("?")[1].split("=")[1];
@@ -90,7 +91,8 @@ $(document).ready(function () {
         data = data.filter(entry => entry.nickname !== nickname);
         localStorage.setItem("userData", JSON.stringify(data));
         $("#flag-image").show();
-        displayQuestion(); 
+        $(".go-leader").hide();
+        displayQuestion();
     }
 
     function goToResults() {
